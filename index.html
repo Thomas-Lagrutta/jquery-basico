@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con jQuery</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container text-center">
+        <h1 id="page-title" class="my-4 text-primary">¡Mirá la siguiente imagen!</h1>
+        <div class="mb-4">
+            <button id="hide-btn" class="btn btn-danger me-2">Ocultar Imagen</button>
+            <button id="show-btn" class="btn btn-success">Mostrar Imagen</button>
+        </div>
+        <img id="image" src="/Ejercicio Jquery/OIP.jpg" alt="Imagen de ejemplo" class="img-fluid rounded shadow">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hide-btn').click(function () {
+                $('#image').hide(); 
+                $('#page-title').text('¡No tenemos ninguna imagen!'); 
+            });
+
+            $('#show-btn').click(function () {
+                $('#image').show(); 
+                $('#page-title').text('¡Mirá la siguiente imagen!'); 
+            });
+        });
+    </script>
+</body>
+</html>
